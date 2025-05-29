@@ -3,28 +3,39 @@
  --font-default: 30px;
 }
 
-.container {
+html {
+    font-size: var(--font-default);
+}
+
+* {
+    margin: 0;
+}
+
+.header {}
+
+.container{}
+
+.nav-main {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: #d4e5d0;
 }
 
 /* formatando o menu da pagina */
 .menu {
     display: flex;
     list-style-type: none;
+    margin: 0 0 0 0;
 }
 
-li {
-    padding: 10px;
-    margin: 1px;
+li.item {
+    padding: 0 0 0 50px;
 }
 
-.pet.main{
-    color: var(--color-pet);
-    font-size: var(--font-default);
-}
-
-.pet.sec {
-    font-size: 15px;
-    color: var(--color-pet);
+li.item > a {
+    display: block;
+    background-color: aqua;
+    padding: 50px;
+    text-decoration: none;
 }
