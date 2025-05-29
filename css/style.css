@@ -1,3 +1,8 @@
+:root {
+ --color-pet:#154e08;
+ --font-default: 30px;
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -10,8 +15,16 @@
 }
 
 li {
-    background-color: bisque;
-    border: 1px solid black;
     padding: 10px;
     margin: 1px;
+}
+
+.pet.main{
+    color: var(--color-pet);
+    font-size: var(--font-default);
+}
+
+.pet.sec {
+    font-size: 15px;
+    color: var(--color-pet);
 }
