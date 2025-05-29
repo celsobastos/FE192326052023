@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* formatando o menu da pagina */
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 1px;
+}
