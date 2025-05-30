@@ -1,6 +1,7 @@
 :root {
  --color-pet:#154e08;
  --font-default: 30px;
+ --link-color: #006840;
 }
 
 html {
@@ -30,12 +31,20 @@ html {
 }
 
 li.item {
-    padding: 0 0 0 50px;
+    padding: 0 0 0 10px;
 }
 
 li.item > a {
     display: block;
-    background-color: aqua;
     padding: 50px;
     text-decoration: none;
+    color: var(--link-color);
+    font-size: 0.89rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+li.item > a:hover{
+    background-color: rgb(206, 217, 226);
+    color: #000;
+    font-size: 35px;
 }
