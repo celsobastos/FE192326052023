@@ -10,6 +10,7 @@ html {
     font-optical-sizing: auto;
     font-weight:900;
     font-style: normal; */
+    font-family: sause;
 }
 
 * {
@@ -50,4 +51,11 @@ li.item > a:hover{
     background-color: rgb(206, 217, 226);
     color: #000;
     font-size: 35px;
+}
+
+.main {
+    width: 50%;
+    height: 500px;
+    background-image: url(../assets/img/offer.jpg);
+    background-size: cover;
 }
