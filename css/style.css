@@ -6,6 +6,10 @@
 
 html {
     font-size: var(--font-default);
+    /* font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight:900;
+    font-style: normal; */
 }
 
 * {
@@ -40,7 +44,6 @@ li.item > a {
     text-decoration: none;
     color: var(--link-color);
     font-size: 0.89rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 li.item > a:hover{
