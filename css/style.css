@@ -135,7 +135,38 @@ li.item > a:hover{
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#00000066, #005c8a, #000000);
+    background: linear-gradient(#000000e7, #0051a2cb, #000000);
     left: 0;
     top: 0;
+}
+
+.modal-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: #fff;
+    width: 50%;
+    box-shadow: 2px 2px 5px #000;
+    border-radius: 2px;
+}
+
+.modal .top {
+    background-color: #323340;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal > .top .fechar {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal > .body {
+    padding: 15px;
 }
