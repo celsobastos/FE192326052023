@@ -17,18 +17,30 @@ html {
     margin: 0;
 }
 
+@media screen and (max-width: 992px) {
+    .navegacao {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .burger {
+        display: none;
+    }
+}
+
 .header {
     background-color: #ddd5c4;
 }
 
 .container{
-    padding: 0 100px 0 100px;
 }
 
 .logotipo a {
     font-size: 2rem;
     color: #936002;
     text-shadow: 2px 2px 2px #000, 2px 2px 5px #8a0000;
+    
 }
 
 .logotipo a:hover {
