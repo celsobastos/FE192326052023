@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/icones.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,7 +21,7 @@
                 <div class="logotipo">
                     <a href="#">Pet Shop</a>
                 </div>
-                <button class="burger"><i class="fa-solid fa-bars"></i></button>
+                <button class="burger" onclick="document.querySelector('.navegacao').style.display = 'block'"><i class="fa-solid fa-bars"></i></button>
                 <nav class="navegacao">
                     <ul class="menu">
                         <li class="item"><a href="#">Home</a></li>
@@ -27,7 +29,7 @@
                         <li class="item"><a href="#">Produtos</a></li>
                         <li class="item"><a href="#">Serviços</a></li>
                         <li class="item">
-                            <a href="#" onclick="document.getElementById('modal').style.display = 'block'">Contatos</a>
+                            <a href="#" onclick="document.getElementById('modal').style.display = 'block'" class="icone seta">Contatos</a>
                         </li>
                     </ul>
                 </nav>

@@ -21,6 +21,21 @@ html {
     .navegacao {
         display: none;
     }
+
+    .menu {
+        display: flex;
+        list-style-type: none;
+        margin: 0 0 0 0;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        background-color: #8f8d6f;
+        top: 50px;
+    }
+}
+
+.burger {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 992px) {
@@ -28,6 +43,9 @@ html {
         display: none;
     }
 }
+
+
+
 
 .header {
     background-color: #ddd5c4;
