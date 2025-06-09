@@ -113,10 +113,42 @@ console.log(zLproduto)
 // var totalSoma = calc(5, 20);
 // console.log(totalSoma)
 
-var calculadora = function (n1, n2) {
-    var soma = n1 + n2
-    return soma;
+
+// var calculadora = function (n1, n2) {
+//     return n1 + n2
+// }
+// var calculadora2 = (n1, n2) => n1 + n2
+// var resultado = calculadora2(2, 3)
+// console.log(resultado)
+
+
+// function calcTeste(texto) {
+//    console.log(texto)
+//    texto()
+// }
+
+// function msn2() {
+//     console.log('Eu sou MSN2')
+// }
+// calcTeste(msn2)
+
+
+/* Loop For */
+
+// Array
+var lista = [5, 50, 'Impacta', true, 5.8, 'Impacta']
+
+console.log(lista)
+
+
+for(var i = 0; i < 5; i++) {
+
+    if (lista[i] == 'Impacta') {
+        console.log('Print: ', lista[i]);
+        continue;
+    }
+
+    console.log(i)
 }
 
-var resultado = calculadora(2, 3)
-console.log(resultado)
+// i = 2
