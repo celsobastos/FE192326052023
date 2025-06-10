@@ -136,19 +136,82 @@ console.log(zLproduto)
 /* Loop For */
 
 // Array
-var lista = [5, 50, 'Impacta', true, 5.8, 'Impacta']
+// var lista = [5, 50, 'Impacta', true, 5.8, 'Impacta']
+// console.log(lista)
+// for(var i = 0; i < 5; i++) {
 
-console.log(lista)
+//     if (lista[i] == 'Impacta') {
+//         console.log('Print: ', lista[i]);
+//         continue;
+//     }
+//     console.log(i)
+// }
 
+const listaFuncionarios = ['Ana', 'Paula', 10, 'Matheus', 'Sergio', 10];
+// var salario = [listaFuncionarios, 1500]
+// console.log(typeof listaFuncionarios);
+// console.log(salario[0][1])
+// console.log(listaFuncionarios.length)
 
-for(var i = 0; i < 5; i++) {
+var interador = 0;
+while(interador < listaFuncionarios.length) {
 
-    if (lista[i] == 'Impacta') {
-        console.log('Print: ', lista[i]);
-        continue;
+    if(listaFuncionarios[interador] == 10) {
+        interador++
+        continue
     }
+    // console.log(listaFuncionarios[interador]);
 
-    console.log(i)
+    interador++;
 }
 
-// i = 2
+// let cor = 'Blue'
+// let nomeCarro = 'C4';
+// const COR = 'red';
+// console.log(COR);
+
+
+/* Objeto */
+let Pessoa = {
+    idade: 41,
+    altura: 1.74,
+    nome: 'Pedro Henrique',
+    folhaPagamento: ['10/05', '20/08'],
+    enderecos:[
+        {
+            numero: 10, 
+            end: 'rua das flores'
+        },
+        {
+            numero: 52, 
+            end: 'rua das Manuel de nobrega'
+        },
+    ],
+    printDados: function() {
+        let nome = this.nome + this.enderecos[0].end
+        console.log(nome)
+    }
+};
+
+
+Pessoa.peso = '76Kg'
+Pessoa.getDadosSalario = function() {
+    let f = this.folhaPagamento[0]
+    console.log('data de pagamento: ', f) 
+}
+
+Pessoa.printDados();
+
+// console.log(Pessoa)
+// Pessoa.printDados()
+
+// let Pessoa2 = Pessoa
+// console.log(Pessoa === Pessoa2)
+// console.log('---------------------------')
+// let nomePessoa1 = 'Carlos';
+// let nomePessoa2 = 'Carlos';
+// console.log(nomePessoa1 === nomePessoa2)
+
+
+let fullname = 'Carlos Eduardo da Silva'; // wrapper
+console.log(fullname.search('Silvas'))
