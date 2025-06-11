@@ -1,22 +1,35 @@
-
-// let valorCompoNome = campoNome
-// let contagem = valorCompoNome;
-let alerta = document.querySelector('.alert');
+let alerta = document.querySelector('.meu-alerta');
 let botaoEnviar = document.querySelector('[data-js="btn-enviar"]')
+let objInputData = document.querySelectorAll('.inputData');
+let alertMsg = document.querySelector('.alert');
+
+// objInputData = [nome, email, senha]
+
+
+console.dir(objInputData);
 
 botaoEnviar.addEventListener('click', (event) => {
+    let campo = '';
+    // debugger;
     event.preventDefault();
-    let contagem = document.querySelector('.nome-user').value;
-
-    if (contagem >= 10) {
-        console.log('passou aqui')
-        alerta.innerHTML = 'Campo no não pode ter mais que 10 caracteres'
+    for(let i = 0; i < objInputData.length; i++) {
+        if (objInputData[i].value.length == '') {
+            objInputData[i].classList.add('ativo')
+            alerta.style.display = 'block';
+            campo += objInputData[i].previousElementSibling.innerHTML + ', ';
+            alertMsg.innerHTML = `Verifique o ${campo} `;
+        }
+        else {
+            objInputData[i].classList.remove('ativo')
+            alertMsg.innerHTML = '';
+            alerta.style.display = 'none'
+        }
     }
+
 })
 
+
 // console.dir(campoNome);
-
-
 // let executaEvento = function() {
 //     alerta.innerHTML = "Funcionou"
 // }

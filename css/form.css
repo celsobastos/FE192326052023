@@ -1,3 +1,20 @@
 * {
     margin: 0;
 }
+
+.ativo {
+    border: 2px solid #ff0000
+}
+
+.ativo:focus {
+    border: 4px solid #ff0000;
+    outline-color:transparent;
+}
+
+.meu-alerta {
+    display: none;
+}
+
+body {
+    background-color: rgba(188, 255, 233, 0.596) !important;
+}
