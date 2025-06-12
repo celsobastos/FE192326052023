@@ -2,6 +2,7 @@ let alerta = document.querySelector('.meu-alerta');
 let botaoEnviar = document.querySelector('[data-js="btn-enviar"]')
 let objInputData = document.querySelectorAll('.inputData');
 let alertMsg = document.querySelector('.alert');
+let form = document.querySelector('form');
 
 // objInputData = [nome, email, senha]
 
@@ -24,6 +25,11 @@ botaoEnviar.addEventListener('click', (event) => {
             alertMsg.innerHTML = '';
             alerta.style.display = 'none'
         }
+    }
+
+
+    if(!campo) {
+        form.submit();
     }
 
 })

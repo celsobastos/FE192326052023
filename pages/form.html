@@ -13,35 +13,35 @@
     <section>
         <h1>Formulario</h1>
         <hr>
-        <form>
+        <form id="form" action="/teste" method="post">
             <div class="meu-alerta">
                 <div class="alert alert-danger"></div>
             </div>
             
             <div>
                 <label class="label-nome" for="nome">Nome</label>
-                <input class="nome-user inputData" type="text" id="nome" placeholder="Seu nome aqui">
+                <input name="nome" class="nome-user inputData" type="text" id="nome" placeholder="Seu nome aqui">
             </div>
             <div>
                 <label for="email">Email</label>
-                <input class="nome inputData" type="email" id="email" placeholder="Seu melhor email">
+                <input name="email" class="nome inputData" type="email" id="email" placeholder="Seu melhor email">
             </div>
             <div>
                 <label for="senha">Senha</label>
-                <input type="password" class="inputData">
+                <input name="senha" type="password" class="inputData">
             </div>
             <div>
                 <label for="estado">Estado</label>
-                <select id="estado">
+                <select id="estado" name="estado">
                     <option value="SP">São Paulo</option>
                     <option value="RJ">Rio de Janeiro</option>
                 </select>
             </div>
             <div>
                 <label for="">Cursos:</label><br>
-                EN: <input type="checkbox" checked><br>
-                PT: <input type="checkbox"><br>
-                ES: <input type="checkbox"><br>
+                EN: <input name="EN" type="checkbox" checked value="en"><br>
+                PT: <input name="PT" type="checkbox" value="pt"><br>
+                ES: <input name="ES" type="checkbox" value="es"><br>
             </div>
             <div>
                 Sexo:
@@ -55,8 +55,8 @@
                 <input type="radio" name="ptv" value="p2"> M
             </div>
 
-            <input type="submit" value="Enviar" data-js="btn-enviar">
-            <input type="reset" value="Limpar">
+            <input name="enviar" type="submit" value="Enviar" data-js="btn-enviar">
+            <input name="limpar" type="reset" value="Limpar">
         </form>
     </section>
     <script src="../js/valida_form.js"></script>
