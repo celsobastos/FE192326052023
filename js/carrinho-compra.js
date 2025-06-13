@@ -6,24 +6,18 @@
     botoes[0].addEventListener('click', () => {
         carrinho.push({preco: 4, produto: 'rosquinhas'})
         console.log(carrinho)
-        console.log(JSON.stringify(carrinho))
     })
 
     botoes[1].addEventListener('click', () => {
         carrinho.push({preco: 10, produto: 'osso'})
         console.log(carrinho)
-        console.log(JSON.stringify(carrinho))
     })
 
     botoes[2].addEventListener('click', () => {
         carrinho.push({preco: 5, produto: 'bolinho'})
         console.log(carrinho)
-        console.log(JSON.stringify(carrinho))
-        
     })
     // eviarCompra = JSON.stringify(carrinho)
-
-
     console.log('Executou');
 
     let compra = {}
@@ -39,4 +33,8 @@
     let compraLoja = JSON.stringify(compra);
     console.log(compraLoja);
 
+
+    /* Converte para Objeto */
+    let compraLojaParse = JSON.parse(compraLoja)
+    console.log(compraLojaParse);
 })()
