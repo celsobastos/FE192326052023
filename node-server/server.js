@@ -24,6 +24,8 @@ app.post('/email', (req, res) => {
 app.post('/email/json', (req, res) => {
     let email = req.body;
 
+    
+
     /* Salvar o email */
 
     setTimeout(function() {
