@@ -110,6 +110,7 @@
             let textoEnter;
             if (event.key = 'Enter') {
                 textoEnter = event.target.value;
+                buscaDadosCorreio(textoEnter)
             }
 
             const novo = document.querySelector(".novaCor");
@@ -119,7 +120,6 @@
 
 
         /* Criando Objetos construtores */
-
         let AnimalLietral = {
             nome: 'red',
             geoLocalize: 123456,
@@ -134,15 +134,59 @@
             }
         }
 
-        // let animal1 = new Animal('Toto', 123456);
-        // animal1.getName()
+        Animal.prototype.getAnimal = AnimalLietral
+        let animal1 = new Animal('Toto', 123456);
+
         // let animal2 = new Animal('Tadeu', 4646);
         // animal2.getName()
 
 
-        let listaAnimais = [10, 11, 66];
+        let listaAnimais = [10, 8, 2025, 45, 78];
 
-        console.dir(listaAnimais);
+        let filtra = listaAnimais.filter(function(valor) {
+                return valor > 40;
+        })
+        //console.log(filtra);
+        let mapa = listaAnimais.map(function(valor){
+            return valor + 1;
+        })
+        //console.log(mapa);
+        listaAnimais.forEach(function(item) {
+            //console.log(item);
+        })
+        //console.dir(listaAnimais);
+        //let numero = Math.round(13.5); // wrapper
+        //console.log(numero);
+
+
+        //console.log('processo 1');
+
+        setTimeout(function(){
+                //console.log('processo 2');
+        }, 2000);
+
+        //console.log('processo 3');
+
+
+        /* Retorna uma promisse //Asyncrono */
+        function buscaEndereco(cep) {
+            let dados = fetch("https://viacep.com.br/ws/"+cep+"/json/");
+            return dados;
+        }
+
+        async function buscaDadosCorreio(cep) {
+            try {
+                const resposta = await buscaEndereco(cep);
+                const data = await resposta.json();
+                console.log(data);
+            } catch(erro) {
+                console.log('Desculpe servidor esta fora do ar');
+            }
+        }
+
+        // buscaDadosCorreio();
+
+
 
 
     </script>
