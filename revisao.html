@@ -117,6 +117,34 @@
             console.dir(event)
         });
 
+
+        /* Criando Objetos construtores */
+
+        let AnimalLietral = {
+            nome: 'red',
+            geoLocalize: 123456,
+        }
+
+        let Animal = function (nome, localiza) {
+            this.nome = nome;
+            this.geoLocalize = localiza;
+
+            this.getName = function() {
+                console.log(this.nome + ' ' + this.geoLocalize)
+            }
+        }
+
+        // let animal1 = new Animal('Toto', 123456);
+        // animal1.getName()
+        // let animal2 = new Animal('Tadeu', 4646);
+        // animal2.getName()
+
+
+        let listaAnimais = [10, 11, 66];
+
+        console.dir(listaAnimais);
+
+
     </script>
 </body>
 </html>
