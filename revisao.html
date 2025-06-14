@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <style>
+        .active{
+            color: rgb(0, 83, 206)
+        }
+        .cores {
+            display: flex;
+            justify-content: space-around;
+        }
+        .cores > div {
+            width: 50px;
+            height: 50px;
+        }
+        .red {
+            background-color: red;
+            cursor: pointer;
+        }
+        .blue {
+            background-color: rgb(38, 0, 255);
+            cursor: pointer;
+        }
+
+        .novaCor {
+            border: solid #999 1px;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p class="active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, velit!</p>
+        <div class="cores">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="novaCor"></div>
+
+            <input type="text" class="texto">
+        </div>
+    </section>
+    <script>
+        let Roda = {
+                    pneu: true,
+                    disco: true,
+                    girar: function() {}
+                }
+        
+        let Carro = {
+            cor: 'red',
+            vidroEletrico: true,
+            velocidade: 0,
+            acelerar: function(num) { 
+                this.velocidade = num
+            },
+            roda: Roda
+        }
+
+        Carro.cor = 'blue'
+
+        // const OjtoRoda = Carro.roda;
+        // OjtoRoda.disco
+
+        // Carro.acelerar(20)
+        // Carro.velocidade
+        // Carro.roda.pneu
+        
+        /* Criando objeto dinamico */
+        let Carro2 = {}
+
+        const boxRed = document.querySelector(".red");
+        function ouverBox() {
+            Carro2.cor = boxRed.className;
+            const novo = document.querySelector(".novaCor");
+            
+            novo.style.backgroundColor = boxRed.className
+        }
+
+
+        boxRed.addEventListener('mouseover', ouverBox);
+        boxRed.addEventListener('press', function (event) {
+
+            event.target
+            console.dir(event)
+        });
+
+
+        const boxBlue = document.querySelector(".blue");
+        function ouverBoxBlue() {
+            Carro2.corParachoque = boxBlue.className;
+            console.log(Carro2);
+            const novo = document.querySelector(".novaCor");
+            novo.style.backgroundColor = boxBlue.className
+        }
+        boxBlue.addEventListener('click', ouverBoxBlue);
+        boxBlue.addEventListener('mouseover', ouverBoxBlue);
+
+
+        
+        // boxRed.id = "teste123"
+        // console.dir(boxRed);
+
+
+        const texto = document.querySelector(".texto");
+        texto.addEventListener('keypress', function (event) {
+            let textoEnter;
+            if (event.key = 'Enter') {
+                textoEnter = event.target.value;
+            }
+
+            const novo = document.querySelector(".novaCor");
+            novo.style.backgroundColor = textoEnter
+            console.dir(event)
+        });
+
+    </script>
+</body>
+</html>
