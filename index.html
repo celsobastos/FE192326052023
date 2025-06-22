@@ -31,7 +31,7 @@
                         <li class="item"><a href="#">Produtos</a></li>
                         <li class="item"><a href="#">Serviços</a></li>
                         <li class="item">
-                            <a href="#" onclick="document.getElementById('modal').style.display = 'block'" class="icone seta">Contatos</a>
+                            <a href="#" class="icone seta contato">Contatos</a>
                         </li>
                     </ul>
                 </nav>
@@ -68,7 +68,7 @@
     </section>
 
     <section class="produtos">
-        <h2> Alimentos Pet</h2>
+        <h2 class="alimentos-pet"> Alimentos Pet</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptates?</p>
 
         <div class="linha">
@@ -88,20 +88,23 @@
     </section>
 
 
-    <footer></footer>
+    <footer>
+        <div class="new-obj"></div><button class="add">+</button>
+
+    </footer>
 
     <div class="tela-fundo" id="modal">
         <div class="modal-container">
             <div class="modal">
                 <div class="top">
-                    <button class="fechar" onclick="document.getElementById('modal').style.display = 'none'">X</button>
+                    <button class="fechar">X</button>
                 </div>
                 <div class="body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ea voluptas doloribus quidem cumque laborum, placeat officia nisi eum natus.
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ea voluptas doloribus quidem cumque laborum, placeat officia nisi eum natus.</p>
 
                     <form>
                         <input type="text">
-                        <button>Enviar</button>
+                        <button class="modal-btn">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -127,10 +130,13 @@
 
     <!-- Animation -->
     <!-- <div class="anime1">Animação 1</div> -->
-
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
     <script src="js/http-request.js"></script>
     <script src="js/valida_form_noticias.js"></script>
     <script src="js/carrinho-compra.js"></script>
+    <script src="js/minha-lib.js"></script>
+    <script src="js/modal-form.js"></script>
 </body>
 
 </html>

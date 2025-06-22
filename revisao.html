@@ -43,6 +43,7 @@
             <input type="text" class="texto">
         </div>
     </section>
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script>
         let Roda = {
                     pneu: true,
@@ -173,7 +174,6 @@
             let dados = fetch("https://viacep.com.br/ws/"+cep+"/json/");
             return dados;
         }
-
         async function buscaDadosCorreio(cep) {
             try {
                 const resposta = await buscaEndereco(cep);
@@ -183,9 +183,22 @@
                 console.log('Desculpe servidor esta fora do ar');
             }
         }
+        buscaDadosCorreio('04849270');
 
-        // buscaDadosCorreio();
 
+
+        $(function() {
+
+            $.ajax({
+                url: "https://viacep.com.br/ws/04849270/json/",
+                data: {},
+                success: function( result ) {
+                    console.log(result.bairro);
+                }
+            });
+
+
+        })
 
 
 

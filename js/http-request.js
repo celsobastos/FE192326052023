@@ -25,4 +25,13 @@
 
     window.EnviarEmail = requestEmail
 
+
+     $.ajax({
+        url: "https://viacep.com.br/ws/04849270/json/",
+        data: {},
+        success: function( result ) {
+            console.log(result.bairro);
+        }
+    });
+
 })()
